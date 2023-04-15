@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import Converter from "./Converter";
+import NavBar from "./Navbar";
+import Form from "./Form";
+// const { convert } = require("html-to-text");
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="App container">
+        <NavBar />
+        <div className="row">
+          <header className="App-header col-6">
+            <Converter />
+          </header>{" "}
+          <header className="App-header col-6">
+            <Form />
+          </header>
+        </div>
+      </div>
+    </>
   );
 }
 
