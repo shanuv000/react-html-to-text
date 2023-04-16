@@ -20,7 +20,7 @@ const Converter = (props) => {
   return (
     <>
       <div
-        className="badge bg-primary text-wrap fs-2 fw-semibold"
+        className="badge bg-danger text-wrap fs-2 fw-semibold"
         // style={{ width: "10rem" }}
         onClick={() => copyText}
       >
