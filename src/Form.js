@@ -33,13 +33,13 @@ const Form = () => {
             {/* <p onClick={() => copyText}>Copy text</p> */}
             <label for="floatingTextarea">Html Codes Here</label>
           </div>
-          {/* <button
+          <button
             type="button"
             class="btn btn-outline-danger"
             // onClick={() => clearForm()}
           >
             Clear
-          </button> */}
+          </button>
         </div>
         <div class="d-flex" style={{ height: "50px" }}>
           <div class="vr"></div>
