@@ -1,16 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Converter from "./Converter";
 import clipboard from "clipboardy";
 
 const Form = () => {
   const [data, setData] = useState("");
+  const inputRef = useRef(null);
+
   console.log(data);
   // const copyText = clipboard.write(data);
   const clearForm = () => {
-    const contentToPaste = clipboard.read();
+    // const contentToPaste = clipboard.read();
+
+    inputRef.current.focus();
     setData("");
     // console.log(contentToPaste);
-    setData(contentToPaste);
+    // setData(contentToPaste);
   };
   return (
     <>
@@ -22,18 +26,20 @@ const Form = () => {
               class="form-control"
               // aria-label="With textarea"
               value={data}
+              autoFocus
+              ref={inputRef}
               onChange={(e) => setData(e.target.value)}
             ></textarea>
             {/* <p onClick={() => copyText}>Copy text</p> */}
             <label for="floatingTextarea">Html Codes Here</label>
           </div>
-          <button
+          {/* <button
             type="button"
             class="btn btn-outline-danger"
-            onClick={() => clearForm()}
+            // onClick={() => clearForm()}
           >
             Clear
-          </button>
+          </button> */}
         </div>
         <div class="d-flex" style={{ height: "50px" }}>
           <div class="vr"></div>
